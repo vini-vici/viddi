@@ -12,7 +12,7 @@ export interface CheckboxProps {
  * @returns 
  */
 export default function Checkbox({ checked, onChange }: CheckboxProps): React.ReactElement {
-
+  console.log(styles);
   return (
     <label className={styles.checkbox}>
       <input

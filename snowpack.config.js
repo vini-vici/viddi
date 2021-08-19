@@ -1,23 +1,25 @@
 // Snowpack Configuration File
 // See all supported options: https://www.snowpack.dev/reference/configuration
 
-/** @type {import("snowpack").SnowpackUserConfig } */
+/** @type {import('snowpack').SnowpackUserConfig } */
 module.exports = {
   mount: {
-    './src': { url: '/'}
+    './src': { url: '/' }
   },
   exclude: [
-    "**/test/**",
-    "**/node_modules/**",
-    "**/*.story.tsx"
+    '**/test/**',
+    '**/node_modules/**',
+    '**/*.story.tsx'
   ],
   plugins: [
-    '@snowpack/plugin-typescript'
+    '@snowpack/plugin-typescript',
+    '@snowpack/plugin-postcss'
   ],
   devOptions: {
     /* ... */
   },
   buildOptions: {
-    clean: true
+    clean: true,
+    out: './dist'
   },
 };

@@ -18,6 +18,7 @@ module.exports = {
           implementation: require('postcss'),
         },
       }
-    }
+    },
+    '@storybook/addon-controls'
   ]
 } as StorybookConfig;

@@ -7,6 +7,7 @@ specifiers:
   '@babel/preset-typescript': ^7.15.0
   '@mdi/js': ^5.9.55
   '@mdi/react': ^1.5.0
+  '@snowpack/plugin-postcss': ^1.4.3
   '@snowpack/plugin-typescript': ^1.2.1
   '@storybook/addon-controls': ^6.3.7
   '@storybook/addon-postcss': ^2.0.0
@@ -39,6 +40,7 @@ devDependencies:
   '@babel/preset-env': 7.15.0_@babel+core@7.15.0
   '@babel/preset-react': 7.14.5_@babel+core@7.15.0
   '@babel/preset-typescript': 7.15.0_@babel+core@7.15.0
+  '@snowpack/plugin-postcss': 1.4.3_postcss@8.3.6
   '@snowpack/plugin-typescript': 1.2.1_typescript@4.3.5
   '@storybook/addon-controls': 6.3.7_aafffb2bfb54f6a4ac6b988db6a316d2
   '@storybook/addon-postcss': 2.0.0
@@ -2168,6 +2170,20 @@ packages:
     resolution: {integrity: sha512-iQADsW4LBMISqZ6Ci1dupJL9pprqwcVFTcOsEmQOEhW+KLCVn/Y4Jrvg2k19fIHCp+iFprriYPTdRcQR8NbUPg==}
     dependencies:
       '@sinonjs/commons': 1.8.3
+    dev: true
+
+  /@snowpack/plugin-postcss/1.4.3_postcss@8.3.6:
+    resolution: {integrity: sha512-RJGYagse6Pi86Bqm8vPukhCwFVa92VIB81qP3PXPQ/ITQy5gVWDYi4oU+r1A6hsEZ9scUNZevfw6ISya+oiMNQ==}
+    peerDependencies:
+      postcss: '*'
+    dependencies:
+      minimatch: 3.0.4
+      normalize-path: 3.0.0
+      postcss: 8.3.6
+      postcss-load-config: 3.1.0
+      workerpool: 6.1.5
+    transitivePeerDependencies:
+      - ts-node
     dev: true
 
   /@snowpack/plugin-typescript/1.2.1_typescript@4.3.5:
@@ -13380,6 +13396,10 @@ packages:
     resolution: {integrity: sha512-P1WjMrUB3qgJNI9jfmpZ/htmBEjFh//6l/5y8SD9hg1Ef5zTTVVoRjTrTEzPrNBQvmhMxkoTsjOXN10GWU7aCg==}
     dependencies:
       microevent.ts: 0.1.1
+    dev: true
+
+  /workerpool/6.1.5:
+    resolution: {integrity: sha512-XdKkCK0Zqc6w3iTxLckiuJ81tiD/o5rBE/m+nXpRCB+/Sq4DqkfXZ/x0jW02DG1tGsfUGXbTJyZDP+eu67haSw==}
     dev: true
 
   /wrap-ansi/7.0.0:
