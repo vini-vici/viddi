@@ -3,11 +3,11 @@ import React from 'react';
 import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
 
-import Button from '@/components/button/button.component';
+import Button from '../button/button.component';
 
 import styles from './modal.module.css';
 
-import Dc from '@/classes/domClasses.class';
+import Dc from '../classes/domClasses.class';
 
 interface ModalProps {
   show?: boolean;
@@ -19,7 +19,7 @@ interface ModalProps {
   cancelText?: React.ReactNode;
 }
 
-export default function Modal(props: React.PropsWithChildren<ModalProps>): React.ReactElement {
+export default function Modal(props: React.PropsWithChildren<ModalProps>): React.ReactNode {
   // grab some props
   const { 
     children,

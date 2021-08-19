@@ -1,4 +1,4 @@
-import Dc from '@/classes/domClasses.class';
+import Dc from '../classes/domClasses.class';
 import React from 'react';
 
 export interface TextareaProps {

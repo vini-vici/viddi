@@ -1,5 +1,5 @@
-import React from 'react';
-import Dc from '@/classes/domClasses.class';
+import React, {PropsWithChildren} from 'react';
+import Dc from '../classes/domClasses.class';
 
 interface TabChangeDetail {
   previousTab?: string;
@@ -9,7 +9,6 @@ interface TabChangeDetail {
 interface TabsProps {
   className?: string;
   activeTab?: string;
-  children?: React.ReactNode[] | React.ReactNode;
   onTabChange?: (e: CustomEvent<TabChangeDetail>) => void;
 }
 
@@ -30,7 +29,7 @@ interface TabMap {
  * @returns React Element
  * @description React tab group element.
  */
-export default function Tabs(props: TabsProps): React.ReactElement {
+export default function Tabs(props: PropsWithChildren<TabsProps>): React.ReactElement {
   const { className, children, onTabChange, activeTab } = props;
   const classes = new Dc('tab-group');
   if(className) classes.add(className);
@@ -57,10 +56,13 @@ export default function Tabs(props: TabsProps): React.ReactElement {
       }));
     },
     removeTab(id) {
-      updateTabMap(prevState => ({
-        ...prevState,
-        [id]: undefined
-      }));
+      updateTabMap(prevState => {
+        const copy = {
+          ...prevState
+        };
+        delete copy[id];
+        return copy;
+      });
     },
     currentTab
   };

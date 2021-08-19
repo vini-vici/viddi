@@ -1,0 +1,294 @@
+[20:34:41] [snowpack] run command: build
+[20:34:41] [snowpack] loaded plugin: C:\Users\jhech\projects\vicci\viddi\node_modules\.pnpm\@snowpack+plugin-typescript@1.2.1_typescript@4.3.5\node_modules\@snowpack\plugin-typescript\plugin.js
+[20:34:41] [snowpack] config loaded: {
+  root: 'C:\\Users\\jhech\\projects\\vicci\\viddi',
+  plugins: [
+    {
+      name: '@snowpack/plugin-typescript',
+      run: [AsyncFunction: run],
+      markChanged: [Function (anonymous)]
+    },
+    {
+      name: '@snowpack/plugin-esbuild',
+      resolve: [Object],
+      load: [AsyncFunction: load],
+      cleanup: [Function: cleanup]
+    }
+  ],
+  alias: {},
+  env: {},
+  exclude: [
+    '**/_*.{sass,scss}',
+    '**.d.ts',
+    'C:\\Users\\jhech\\projects\\vicci\\viddi\\build/**',
+    '**/node_modules/**',
+    '**/test/**',
+    '**/*.story.tsx'
+  ],
+  routes: [],
+  dependencies: {},
+  devOptions: {
+    secure: false,
+    hostname: 'localhost',
+    port: 8080,
+    hmrDelay: 0,
+    hmrPort: undefined,
+    hmrErrorOverlay: true
+  },
+  buildOptions: {
+    out: 'C:\\Users\\jhech\\projects\\vicci\\viddi\\build',
+    baseUrl: '/',
+    metaUrlPath: '/_snowpack',
+    cacheDirPath: 'C:\\Users\\jhech\\projects\\vicci\\viddi\\node_modules\\.cache\\snowpack',
+    clean: true,
+    sourcemap: false,
+    watch: false,
+    htmlFragments: false,
+    ssr: false,
+    resolveProxyImports: true
+  },
+  testOptions: { files: [ '__tests__/**/*', '**/*.@(spec|test).*' ] },
+  packageOptions: {
+    source: 'local',
+    external: [],
+    packageLookupFields: [],
+    knownEntrypoints: [],
+    rollup: { plugins: [] }
+  },
+  mount: {
+    'C:\\Users\\jhech\\projects\\vicci\\viddi\\src': { url: '/', static: false, resolve: true, dot: false }
+  },
+  experiments: {},
+  mode: 'production',
+  optimize: undefined,
+  _extensionMap: {
+    '.mjs': [ '.js' ],
+    '.jsx': [ '.js' ],
+    '.ts': [ '.js' ],
+    '.tsx': [ '.js' ]
+  }
+}
+[20:34:41] [snowpack] lockfile not loaded
+[20:34:41] [snowpack] Mounting directory: 'C:\Users\jhech\projects\vicci\viddi\src' as URL '/'
+[20:34:41] [snowpack] Using in-memory cache: [object Object]
+[20:34:41] [snowpack] starting @snowpack/plugin-typescript run() workers
+[20:34:41] [snowpack] Mounting directory: 'C:\Users\jhech\projects\vicci\viddi\src' as URL '/'
+[20:34:41] [snowpack] ! building files...
+[20:34:41] [snowpack] QUEUE: /index.js,/main.css,/tsconfig.json,/button/button.component.js,/classes/domClasses.class.js,/checkbox/checkbox.component.js,/checkbox/checkbox.module.css,/checkbox/checkbox.module.css.json,/expandable/expandable.component.js,/formfield/formfield.component.js,/input/input.component.js,/loading/loading.component.js,/modal/modal.component.js,/modal/modal.module.css,/modal/modal.module.css.json,/tabs/index.js,/tabs/tab.component.js,/tabs/tabs.component.js,/textarea/textarea.component.js
+[20:34:41] [snowpack] BUILD: /index.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\index.ts]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\index.ts]
+[20:34:41] [snowpack] Scanning src\index.ts for imports as JS
+[20:34:41] [snowpack] ADD: /button/button.component.js
+[20:34:41] [snowpack] ADD: /checkbox/checkbox.component.js
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: /expandable/expandable.component.js
+[20:34:41] [snowpack] ADD: /formfield/formfield.component.js
+[20:34:41] [snowpack] ADD: /input/input.component.js
+[20:34:41] [snowpack] ADD: /loading/loading.component.js
+[20:34:41] [snowpack] ADD: /modal/modal.component.js
+[20:34:41] [snowpack] ADD: /tabs/index.js
+[20:34:41] [snowpack] ADD: /textarea/textarea.component.js
+[20:34:41] [snowpack] BUILD: /main.css
+[20:34:41] [snowpack] Scanning src\main.css for imports as CSS
+[20:34:41] [snowpack] BUILD: /tsconfig.json
+[20:34:41] [snowpack] BUILD: /button/button.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\button\button.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\button\button.component.tsx]
+[20:34:41] [snowpack] Scanning src\button\button.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] BUILD: /classes/domClasses.class.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\classes\domClasses.class.ts]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\classes\domClasses.class.ts]
+[20:34:41] [snowpack] Scanning src\classes\domClasses.class.ts for imports as JS
+[20:34:41] [snowpack] BUILD: /checkbox/checkbox.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\checkbox\checkbox.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\checkbox\checkbox.component.tsx]
+[20:34:41] [snowpack] Scanning src\checkbox\checkbox.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /checkbox/checkbox.module.css
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] BUILD: /checkbox/checkbox.module.css
+[20:34:41] [snowpack] Scanning src\checkbox\checkbox.module.css for imports as CSS
+[20:34:41] [snowpack] BUILD: /checkbox/checkbox.module.css.json
+[20:34:41] [snowpack] Scanning src\checkbox\checkbox.module.css for imports as CSS
+[20:34:41] [snowpack] BUILD: /expandable/expandable.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\expandable\expandable.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\expandable\expandable.component.tsx]
+[20:34:41] [snowpack] Scanning src\expandable\expandable.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] ADD: @mdi/react
+[20:34:41] [snowpack] ADD: @mdi/js
+[20:34:41] [snowpack] BUILD: /formfield/formfield.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\formfield\formfield.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\formfield\formfield.component.tsx]
+[20:34:41] [snowpack] Scanning src\formfield\formfield.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] BUILD: /input/input.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\input\input.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\input\input.component.tsx]
+[20:34:41] [snowpack] Scanning src\input\input.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] BUILD: /loading/loading.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\loading\loading.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\loading\loading.component.tsx]
+[20:34:41] [snowpack] Scanning src\loading\loading.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] ADD: @mdi/react
+[20:34:41] [snowpack] ADD: @mdi/js
+[20:34:41] [snowpack] BUILD: /modal/modal.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\modal\modal.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\modal\modal.component.tsx]
+[20:34:41] [snowpack] Scanning src\modal\modal.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /button/button.component.js
+[20:34:41] [snowpack] ADD: /modal/modal.module.css
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] ADD: @mdi/react
+[20:34:41] [snowpack] ADD: @mdi/js
+[20:34:41] [snowpack] BUILD: /modal/modal.module.css
+[20:34:41] [snowpack] Scanning src\modal\modal.module.css for imports as CSS
+[20:34:41] [snowpack] BUILD: /modal/modal.module.css.json
+[20:34:41] [snowpack] Scanning src\modal\modal.module.css for imports as CSS
+[20:34:41] [snowpack] BUILD: /tabs/index.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\tabs\index.ts]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\tabs\index.ts]
+[20:34:41] [snowpack] Scanning src\tabs\index.ts for imports as JS
+[20:34:41] [snowpack] ADD: /tabs/tabs.component.js
+[20:34:41] [snowpack] ADD: /tabs/tabs.component.js
+[20:34:41] [snowpack] ADD: /tabs/tab.component.js
+[20:34:41] [snowpack] BUILD: /tabs/tab.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\tabs\tab.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\tabs\tab.component.tsx]
+[20:34:41] [snowpack] Scanning src\tabs\tab.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /tabs/tabs.component.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] BUILD: /tabs/tabs.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\tabs\tabs.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\tabs\tabs.component.tsx]
+[20:34:41] [snowpack] Scanning src\tabs\tabs.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] BUILD: /textarea/textarea.component.js
+[20:34:41] [@snowpack/plugin-esbuild] load() startingΓÇª [src\textarea\textarea.component.tsx]
+[20:34:41] [@snowpack/plugin-esbuild] Γ£ö load() success [src\textarea\textarea.component.tsx]
+[20:34:41] [snowpack] Scanning src\textarea\textarea.component.tsx for imports as JS
+[20:34:41] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:41] [snowpack] ADD: react
+[20:34:41] [snowpack] Γ£ö files built. [0.17s]
+[20:34:41] [snowpack] ! building dependencies...
+[20:34:41] [esinstall] C:\Users\jhech\projects\vicci\viddi
+[20:34:41] [esinstall] running installer with options: {"input":{"@mdi/js":"C:\\Users\\jhech\\projects\\vicci\\viddi\\node_modules\\.pnpm\\@mdi+js@5.9.55\\node_modules\\@mdi\\js\\mdi.js","@mdi/react":"C:\\Users\\jhech\\projects\\vicci\\viddi\\node_modules\\.pnpm\\@mdi+react@1.5.0\\node_modules\\@mdi\\react\\Icon.js","react":"C:\\Users\\jhech\\projects\\vicci\\viddi\\node_modules\\.pnpm\\react@17.0.2\\node_modules\\react\\index.js"},"treeshake":{"moduleSideEffects":true},"plugins":[{"name":"alias"},{"name":"snowpack:fetch-handler"},{"name":"node-resolve"},{"name":"json"},{"name":"snowpack:rollup-plugin-css"},{"name":"replace"},{"name":"commonjs"},{"name":"snowpack:wrap-install-targets"},{"name":"snowpack:rollup-plugin-node-process-polyfill"},{"name":"esinstall:snowpack"},{"name":"snowpack:rollup-plugin-catch-unresolved"},{"name":"snowpack:rollup-plugin-strip-source-mapping"}]}
+[20:34:41] [esinstall] cjsAutoDetectExportsStatic C:\Users\jhech\projects\vicci\viddi\node_modules\.pnpm\@mdi+js@5.9.55\node_modules\@mdi\js\mdi.js: Unexpected export statement in CJS module.
+  at @:2:8
+[20:34:41] [esinstall] cjsAutoDetectExportsRuntime error C:/Users/jhech/projects/vicci/viddi/node_modules/.pnpm/@mdi+js@5.9.55/node_modules/@mdi/js/mdi.js: Command failed with exit code 1: node -p JSON.stringify(Object.keys(require('C:/Users/jhech/projects/vicci/viddi/node_modules/.pnpm/@mdi+js@5.9.55/node_modules/@mdi/js/mdi.js')))
+C:\Users\jhech\projects\vicci\viddi\node_modules\.pnpm\@mdi+js@5.9.55\node_modules\@mdi\js\mdi.js:2
+export var mdiAbTesting = "M4 2A2 2 0 0 0 2 4V12H4V8H6V12H8V4A2 2 0 0 0 6 2H4M4 4H6V6H4M22 15.5V14A2 2 0 0 0 20 12H16V22H20A2 2 0 0 0 22 20V18.5A1.54 1.54 0 0 0 20.5 17A1.54 1.54 0 0 0 22 15.5M20 20H18V18H20V20M20 16H18V14H20M5.79 21.61L4.21 20.39L18.21 2.39L19.79 3.61Z";
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at [eval]:1:28
+    at Script.runInThisContext (vm.js:133:18)
+    at Object.runInThisContext (vm.js:310:38)
+[20:34:41] [esinstall] cjsAutoDetectExportsRuntimeUntrusted error C:/Users/jhech/projects/vicci/viddi/node_modules/.pnpm/@mdi+js@5.9.55/node_modules/@mdi/js/mdi.js: Unexpected token 'export'
+[20:34:41] [esinstall] cjsAutoDetectExportsRuntime success C:/Users/jhech/projects/vicci/viddi/node_modules/.pnpm/@mdi+react@1.5.0/node_modules/@mdi/react/Icon.js: Icon,Stack
+[20:34:42] [esinstall] installing npm packages: @mdi/js, @mdi/react, react
+[20:34:42] [esinstall] writing install results to disk
+[20:34:42] [snowpack] Successfully ran esinstall.
+[20:34:42] [snowpack] Γ£ö dependencies built. [0.97s]
+[20:34:42] [snowpack] ! writing to disk...
+[20:34:42] [snowpack] QUEUE: /index.js,/main.css,/tsconfig.json,/button/button.component.js,/classes/domClasses.class.js,/checkbox/checkbox.component.js,/checkbox/checkbox.module.css,/checkbox/checkbox.module.css.json,/expandable/expandable.component.js,/formfield/formfield.component.js,/input/input.component.js,/loading/loading.component.js,/modal/modal.component.js,/modal/modal.module.css,/modal/modal.module.css.json,/tabs/index.js,/tabs/tab.component.js,/tabs/tabs.component.js,/textarea/textarea.component.js
+[20:34:42] [snowpack] BUILD: /index.js
+[20:34:42] [snowpack] Scanning src\index.ts for imports as JS
+[20:34:42] [snowpack] ADD: /button/button.component.js
+[20:34:42] [snowpack] ADD: /checkbox/checkbox.component.js
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /expandable/expandable.component.js
+[20:34:42] [snowpack] ADD: /formfield/formfield.component.js
+[20:34:42] [snowpack] ADD: /input/input.component.js
+[20:34:42] [snowpack] ADD: /loading/loading.component.js
+[20:34:42] [snowpack] ADD: /modal/modal.component.js
+[20:34:42] [snowpack] ADD: /tabs/index.js
+[20:34:42] [snowpack] ADD: /textarea/textarea.component.js
+[20:34:42] [snowpack] BUILD: /main.css
+[20:34:42] [snowpack] Scanning src\main.css for imports as CSS
+[20:34:42] [snowpack] BUILD: /tsconfig.json
+[20:34:42] [snowpack] BUILD: /button/button.component.js
+[20:34:42] [snowpack] Scanning src\button\button.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /classes/domClasses.class.js
+[20:34:42] [snowpack] Scanning src\classes\domClasses.class.ts for imports as JS
+[20:34:42] [snowpack] BUILD: /checkbox/checkbox.component.js
+[20:34:42] [snowpack] Scanning src\checkbox\checkbox.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /checkbox/checkbox.module.css.proxy.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /checkbox/checkbox.module.css
+[20:34:42] [snowpack] Scanning src\checkbox\checkbox.module.css for imports as CSS
+[20:34:42] [snowpack] BUILD: /checkbox/checkbox.module.css.json
+[20:34:42] [snowpack] Scanning src\checkbox\checkbox.module.css for imports as CSS
+[20:34:42] [snowpack] BUILD: /expandable/expandable.component.js
+[20:34:42] [snowpack] Scanning src\expandable\expandable.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/@mdi/react.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/@mdi/js.js
+[20:34:42] [snowpack] BUILD: /formfield/formfield.component.js
+[20:34:42] [snowpack] Scanning src\formfield\formfield.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /input/input.component.js
+[20:34:42] [snowpack] Scanning src\input\input.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /loading/loading.component.js
+[20:34:42] [snowpack] Scanning src\loading\loading.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/@mdi/react.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/@mdi/js.js
+[20:34:42] [snowpack] BUILD: /modal/modal.component.js
+[20:34:42] [snowpack] Scanning src\modal\modal.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /button/button.component.js
+[20:34:42] [snowpack] ADD: /modal/modal.module.css.proxy.js
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/@mdi/react.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/@mdi/js.js
+[20:34:42] [snowpack] BUILD: /modal/modal.module.css
+[20:34:42] [snowpack] Scanning src\modal\modal.module.css for imports as CSS
+[20:34:42] [snowpack] BUILD: /modal/modal.module.css.json
+[20:34:42] [snowpack] Scanning src\modal\modal.module.css for imports as CSS
+[20:34:42] [snowpack] BUILD: /tabs/index.js
+[20:34:42] [snowpack] Scanning src\tabs\index.ts for imports as JS
+[20:34:42] [snowpack] ADD: /tabs/tabs.component.js
+[20:34:42] [snowpack] ADD: /tabs/tabs.component.js
+[20:34:42] [snowpack] ADD: /tabs/tab.component.js
+[20:34:42] [snowpack] BUILD: /tabs/tab.component.js
+[20:34:42] [snowpack] Scanning src\tabs\tab.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /tabs/tabs.component.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /tabs/tabs.component.js
+[20:34:42] [snowpack] Scanning src\tabs\tabs.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /textarea/textarea.component.js
+[20:34:42] [snowpack] Scanning src\textarea\textarea.component.tsx for imports as JS
+[20:34:42] [snowpack] ADD: /classes/domClasses.class.js
+[20:34:42] [snowpack] ADD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /_snowpack/pkg/react.js
+[20:34:42] [snowpack] BUILD: /checkbox/checkbox.module.css.proxy.js
+[20:34:42] [snowpack] ADD: /checkbox/checkbox.module.css.json
+[20:34:42] [snowpack] BUILD: /_snowpack/pkg/@mdi/react.js
+[20:34:42] [snowpack] BUILD: /_snowpack/pkg/@mdi/js.js
+[20:34:42] [snowpack] BUILD: /modal/modal.module.css.proxy.js
+[20:34:42] [snowpack] ADD: /modal/modal.module.css.json
+[20:34:42] [snowpack] Γ£ö write complete. [0.08s]
+[20:34:42] [snowpack] Γû╢ Build Complete!
