@@ -20,5 +20,22 @@ module.exports = {
       }
     },
     '@storybook/addon-controls'
-  ]
+  ],
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.module\.css$/,
+      use: [
+        require.resolve('style-loader'), 
+        {
+          loader: require.resolve('css-loader'),
+          options: {
+            modules: true,
+            importLoaders: 1
+          }
+        },
+        require.resolve('postcss-loader')
+      ]
+    });
+    return config;
+  }
 } as StorybookConfig;
