@@ -5,7 +5,7 @@ interface TabProps {
   header: string;
 }
 
-export default function Tab(props: React.PropsWithChildren<TabProps>): React.ReactElement {
+export default function Tab(props: React.PropsWithChildren<TabProps>): React.ReactNode {
   const {header, id = header, children} = props;
   const tabs = useTabs();
   React.useEffect(() => {

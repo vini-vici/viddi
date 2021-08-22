@@ -1,4 +1,4 @@
-import DomClasses from '@/classes/domClasses.class';
+import DomClasses from '../classes/domClasses.class';
 import React from 'react';
 
 interface InputProps {

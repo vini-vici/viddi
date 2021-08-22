@@ -15,7 +15,7 @@ export default function Button(props: PropsWithChildren<ButtonProps>): React.Rea
   else if (variant == 'secondary') classes.add('bg-gray-400');
 
   if(className) classes.add(className);
-  
+
   return (
     <button
       className={classes.toString()}

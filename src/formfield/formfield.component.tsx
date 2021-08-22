@@ -1,5 +1,5 @@
 import React from 'react';
-import Dc from '@/classes/domClasses.class';
+import Dc from '../classes/domClasses.class';
 
 export interface FormFieldProps {
   className?: string;
