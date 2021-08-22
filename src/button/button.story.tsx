@@ -16,7 +16,7 @@ export default {
   }
 } as Meta;
 
-const S: Story<ComponentProps<typeof Button>> = (args) => <Button {...args}/>;
+const S: Story<ComponentProps<typeof Button>> = args => <Button {...args}/>;
 
 export const Default = S.bind({});
 
@@ -24,7 +24,7 @@ Default.args = {
   variant: 'primary',
   type: 'button',
   children: 'Default Button'
-}
+};
 
 Default.argTypes = {
   variant: {
@@ -35,11 +35,11 @@ Default.argTypes = {
       ]
     }
   }
-}
+};
 
 export const Custom = S.bind({});
 Custom.args = {
   variant: 'custom',
   className: 'bg-red-400 border-2 border-blue-500 text-white',
   children: 'Custom classes'
-}
+};

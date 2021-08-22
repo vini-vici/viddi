@@ -25,7 +25,7 @@ export default {
   }
 } as Meta;
 
-const story: Story<ComponentProps<typeof Input>> = (args) => <Input {...args} />;
+const story: Story<ComponentProps<typeof Input>> = args => <Input {...args} />;
 
 export const Default = story.bind({});
 Default.args = {

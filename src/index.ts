@@ -6,5 +6,5 @@ export { default as FormField } from './formfield/formfield.component';
 export { default as Input } from './input/input.component';
 export { default as Loading } from './loading/loading.component';
 export { default as Modal } from './modal/modal.component';
-export * from './tabs'
+export * from './tabs';
 export { default as Textarea } from './textarea/textarea.component';

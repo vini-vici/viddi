@@ -22,5 +22,5 @@
 
 .checkbox input:checked + .checkbox-container .checkbox-indicator {
   transform: translateX(0.5em) scale(0.7);
-  @apply bg-blue-300;
+  @apply bg-blue-400;
 }

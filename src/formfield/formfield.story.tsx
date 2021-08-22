@@ -10,7 +10,7 @@ export default {
   component: FormField
 } as Meta;
 
-const story: Story<ComponentProps<typeof FormField>> = (args) => <FormField {...args}/>;
+const story: Story<ComponentProps<typeof FormField>> = args => <FormField {...args}/>;
 
 export const Default = story.bind({});
 Default.args = {
@@ -19,7 +19,7 @@ Default.args = {
   children: (
     <Input />
   )
-}
+};
 
 export const Custom = story.bind({});
 
@@ -37,4 +37,4 @@ Custom.args = {
   children: (
     <Input placeholder="Placeholder"/>
   )
-}
+};
