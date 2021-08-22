@@ -1,0 +1,30 @@
+name: "Release"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/mainline' && !startsWith(github.ref, 'ref/tags')}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure Committer
+        run: |
+          git config user.name "Release Bot"
+          git config user.email "<>"
+      - name: Use NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - run: npm i -g pnpm
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm release
+        name: Run Release Command
+      - name: Push Tag back to repo
+        uses: ad-m/github-push-action@master
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          branch: mainline
+          tags: true
+
