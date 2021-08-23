@@ -1,27 +1,17 @@
 name: "Release"
 
 on:
-  pull_request:
-    types: [closed]
-
-permissions:
-  contents: read
-  pull-requests: write
+  workflow_dispatch:
+    
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Uses Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@vini-vici'
-      - run: npm i -g pnpm
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm build
-      - run: npm publish
-        env: 
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN}}  
+      - name: Configure Committer
+        run: |
+          git config user.name "Release Bot"
+          git config user.email "<>"
+      - name: Bump Version
+        uses: qzb/standard-version@v1
