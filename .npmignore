@@ -1,0 +1,6 @@
+test/
+mocks/
+node_modules
+coverage
+.storybook
+.github
