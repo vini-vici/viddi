@@ -16,11 +16,12 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@vini-vici'
 
-      - run: |
+      - name: Build & Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           npm i -g pnpm
           pnpm i --frozen-lockfile
           pnpm build
           npm publish
-        name: Build & Publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
