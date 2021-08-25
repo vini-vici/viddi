@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.7 (2021-08-25)
+
+
+### Bug Fixes
+
+* Fixes CSS interaction between checkboxes and modal background. ([b0f6a12](https://github.com/vini-vici/viddi/commit/b0f6a1272a009c7165986f54826917a8c0d9377f))
+
 ### 1.0.6 (2021-08-24)
 
 ### [1.0.5](https://github.com/vini-vici/viddi/compare/v1.0.4...v1.0.5) (2021-08-23)
