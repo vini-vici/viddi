@@ -27,4 +27,10 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           branch: mainline
           tags: true
+      - run: pnpm build
+        name: Build Assets
+      - run: npm publish
+        name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
