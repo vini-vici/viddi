@@ -19,7 +19,7 @@ interface ModalProps {
   cancelText?: React.ReactNode;
 }
 
-export default function Modal(props: React.PropsWithChildren<ModalProps>): React.ReactElement {
+export default function Modal(props: React.PropsWithChildren<ModalProps>): React.ReactElement | null {
   // grab some props
   const { 
     children,
