@@ -30,5 +30,6 @@ const story: Story<ComponentProps<typeof Input>> = args => <Input {...args} />;
 export const Default = story.bind({});
 Default.args = {
   type: 'text',
-  placeholder: 'Placeholder'
+  placeholder: 'Placeholder',
+  disabled: false
 };

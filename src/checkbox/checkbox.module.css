@@ -25,3 +25,8 @@
   transform: translateX(0.5em) scale(0.7);
   @apply bg-blue-400;
 }
+
+
+.checkbox input:disabled + .checkbox-container {
+  @apply cursor-not-allowed bg-gray-400;
+}

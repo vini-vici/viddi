@@ -7,6 +7,7 @@ interface InputProps {
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
+  disabled?: boolean;
 }
 
 /**
@@ -20,7 +21,8 @@ export default function Input(props: InputProps): React.ReactElement {
     placeholder,
     onChange,
     value,
-    type = 'text'
+    type = 'text',
+    disabled = false
   } = props;
   
   const classes = new DomClasses('px-2 py-1 border rounded');
@@ -36,6 +38,7 @@ export default function Input(props: InputProps): React.ReactElement {
       placeholder={placeholder}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange?.(e)}
       value={value}
+      disabled={disabled}
     />
   );
 }

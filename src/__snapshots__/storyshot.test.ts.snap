@@ -23,7 +23,8 @@ exports[`Storyshots Checkbox Default 1`] = `
   className="checkbox"
 >
   <input
-    checked={false}
+    checked={true}
+    disabled={true}
     type="checkbox"
   />
   <div
@@ -153,6 +154,7 @@ exports[`Storyshots FormField Custom 1`] = `
   >
     <input
       className="px-2 py-1 border rounded"
+      disabled={false}
       onChange={[Function]}
       placeholder="Placeholder"
       type="text"
@@ -180,6 +182,7 @@ exports[`Storyshots FormField Default 1`] = `
   >
     <input
       className="px-2 py-1 border rounded"
+      disabled={false}
       onChange={[Function]}
       type="text"
     />
@@ -190,6 +193,7 @@ exports[`Storyshots FormField Default 1`] = `
 exports[`Storyshots Input Default 1`] = `
 <input
   className="px-2 py-1 border rounded"
+  disabled={false}
   onChange={[Function]}
   placeholder="Placeholder"
   type="text"
@@ -368,6 +372,7 @@ exports[`Storyshots Tabs Examples Default 1`] = `
 exports[`Storyshots Textarea Default 1`] = `
 <textarea
   className="border border-gray-300 py-1 px-2 rounded"
+  disabled={false}
   onChange={[Function]}
   placeholder="Placeholder text"
   value="v
@@ -390,6 +395,7 @@ t"
 exports[`Storyshots Textarea Full Width 1`] = `
 <textarea
   className="border border-gray-300 py-1 px-2 rounded w-full"
+  disabled={false}
   onChange={[Function]}
   value="v
 e
