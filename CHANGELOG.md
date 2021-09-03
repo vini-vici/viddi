@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/vini-vici/viddi/compare/v1.0.14...v1.1.0) (2021-09-03)
+
+
+### Features
+
+* Adds disabled prop to inputs ([1e91b2e](https://github.com/vini-vici/viddi/commit/1e91b2e2be87d6c662c565c05508be769a9d6dbe))
+
 ### 1.0.14 (2021-08-25)
 
 ### 1.0.13 (2021-08-25)
