@@ -13,7 +13,8 @@ const story: Story<ComponentProps<typeof Checkbox>> = args => <Checkbox {...args
 // TODO: storybook breaks on this one. Will likely break on Modal as well.
 export const Default = story.bind({});
 Default.args = {
-  checked: false
+  checked: true,
+  disabled: true
 };
 
 Default.argTypes = {

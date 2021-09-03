@@ -13,11 +13,12 @@ const story: Story<ComponentType<typeof Textarea>> = args => <Textarea {...args}
 export const Default = story.bind({});
 Default.args = {
   placeholder: 'Placeholder text',
-  value: 'very long text'.split('').join('\n')
+  value: 'very long text'.split('').join('\n'),
+  disabled: false
 };
 
 export const FullWidth = story.bind({});
 FullWidth.args = {
   value: 'very long text'.split('').join('\n'),
-  className: 'w-full'
+  className: 'w-full',
 };
