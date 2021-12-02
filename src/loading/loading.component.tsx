@@ -17,7 +17,11 @@ export default function Loading({ text = 'Loading', size = 1, icon = mdiLoading}
         path={icon}
         spin={1.5}
       />
-      {text}...
+      {
+        text ? 
+          `${text}...` :
+          null
+      }
     </div>
   );
 }
