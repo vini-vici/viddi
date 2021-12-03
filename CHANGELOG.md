@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/vini-vici/viddi/compare/v1.1.0...v1.1.1) (2021-12-03)
+
+
+### Bug Fixes
+
+* **Loading:** Not supplying text removes "..." in loading ([21ca7bd](https://github.com/vini-vici/viddi/commit/21ca7bdf8ab5fc6d1a43e9d41a0c8741ab58b628))
+
 ## [1.1.0](https://github.com/vini-vici/viddi/compare/v1.0.14...v1.1.0) (2021-09-03)
 
 
