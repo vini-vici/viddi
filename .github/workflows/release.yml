@@ -6,12 +6,15 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/mainline' && !startsWith(github.ref, 'ref/tags')}}
+    # if: ${{ github.ref == 'refs/heads/mainline' && !startsWith(github.ref, 'ref/tags')}}
     permissions:
       packages: write
       contents: write
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.6
       - name: Configure Committer
         run: |
           git config user.name "Release Bot"
@@ -23,7 +26,6 @@ jobs:
           node-version: 16.x
           registry-url: 'https://npm.pkg.github.com'
           scope: '@vini-vici'
-      - run: npm i -g pnpm
       - run: pnpm i --frozen-lockfile
       - run: pnpm release
         name: Run Release Command
@@ -31,11 +33,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
-          branch: mainline
+          branch: fix/testing-multiple-workflows
           tags: true
-      - run: pnpm build
-        name: Build Assets
-      - run: npm publish
-        name: Publish to NPM
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
