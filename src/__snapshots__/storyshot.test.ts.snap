@@ -240,8 +240,7 @@ exports[`Storyshots Loading Custom Icon 1`] = `
       />
     </g>
   </svg>
-  Loading
-  ...
+  Loading...
 </div>
 `;
 
@@ -285,8 +284,7 @@ exports[`Storyshots Loading Default 1`] = `
       />
     </g>
   </svg>
-  Custom
-  ...
+  Custom...
 </div>
 `;
 

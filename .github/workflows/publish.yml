@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/setup-action@v2.0.1
+        with:
+          version: 6.23.6
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
@@ -17,10 +20,9 @@ jobs:
           scope: '@vini-vici'
 
       - run: npm i -g pnpm
-      - run: pnpm i --frozen-lockfile
       - run: pnpm build
         name: Build Assets
-      - run: npm publish
+      - run: pnpm publish
         name: Publish to Npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
