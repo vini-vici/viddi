@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 16.x
           registry-url: 'https://npm.pkg.github.com'
+          cache: 'pnpm'
           scope: '@vini-vici'
       - run: pnpm i --frozen-lockfile
       - run: pnpm release
