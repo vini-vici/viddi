@@ -41,5 +41,5 @@ export const Custom = S.bind({});
 Custom.args = {
   variant: 'custom',
   className: 'bg-red-400 border-2 border-blue-500 text-white',
-  children: 'Custom classes'
+  children: 'Custom classes',
 };

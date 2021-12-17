@@ -1,7 +1,7 @@
 import DomClasses from '../classes/domClasses.class';
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-interface InputProps {
+interface InputProps extends HTMLProps<HTMLInputElement> {
   type?: string;
   className?: string;
   placeholder?: string;
@@ -22,7 +22,8 @@ export default function Input(props: InputProps): React.ReactElement {
     onChange,
     value,
     type = 'text',
-    disabled = false
+    disabled = false,
+    ...rest
   } = props;
   
   const classes = new DomClasses('px-2 py-1 border rounded');
@@ -39,6 +40,7 @@ export default function Input(props: InputProps): React.ReactElement {
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange?.(e)}
       value={value}
       disabled={disabled}
+      {...rest}
     />
   );
 }

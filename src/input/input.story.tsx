@@ -31,5 +31,6 @@ export const Default = story.bind({});
 Default.args = {
   type: 'text',
   placeholder: 'Placeholder',
-  disabled: false
+  disabled: false,
+  'aria-label': 'Hello'
 };
