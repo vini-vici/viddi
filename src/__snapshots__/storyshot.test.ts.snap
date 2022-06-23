@@ -153,8 +153,7 @@ exports[`Storyshots FormField Custom 1`] = `
     className="form-field-control"
   >
     <input
-      className="px-2 py-1 border rounded"
-      disabled={false}
+      className="px-2 py-1 border rounded disabled:bg-gray-200"
       onChange={[Function]}
       placeholder="Placeholder"
       type="text"
@@ -181,8 +180,7 @@ exports[`Storyshots FormField Default 1`] = `
     className="form-field-control"
   >
     <input
-      className="px-2 py-1 border rounded"
-      disabled={false}
+      className="px-2 py-1 border rounded disabled:bg-gray-200"
       onChange={[Function]}
       type="text"
     />
@@ -192,10 +190,19 @@ exports[`Storyshots FormField Default 1`] = `
 
 exports[`Storyshots Input Default 1`] = `
 <input
-  className="px-2 py-1 border rounded"
+  aria-label="Hello"
+  className="px-2 py-1 border rounded disabled:bg-gray-200"
   disabled={false}
   onChange={[Function]}
   placeholder="Placeholder"
+  type="text"
+/>
+`;
+
+exports[`Storyshots Input Forward Story 1`] = `
+<input
+  className="px-2 py-1 border rounded disabled:bg-gray-200"
+  placeholder="auto focus?"
   type="text"
 />
 `;
@@ -390,10 +397,28 @@ t"
 />
 `;
 
+exports[`Storyshots Textarea Forward Story 1`] = `
+<textarea
+  value="v
+e
+r
+y
+ 
+l
+o
+n
+g
+ 
+t
+e
+x
+t"
+/>
+`;
+
 exports[`Storyshots Textarea Full Width 1`] = `
 <textarea
   className="border border-gray-300 py-1 px-2 rounded w-full"
-  disabled={false}
   onChange={[Function]}
   value="v
 e

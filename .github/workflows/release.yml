@@ -1,4 +1,4 @@
-name: "Release"
+name: "Release and Publish"
 
 on:
   workflow_dispatch:
@@ -35,3 +35,9 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           branch: mainline
           tags: true
+      # Github Actions does not run from refs that were pushed by other actions, as such,
+      # the publish mechanism needs to go here as well.
+      - name: Publish
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

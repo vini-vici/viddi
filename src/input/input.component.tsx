@@ -1,7 +1,7 @@
 import DomClasses from '../classes/domClasses.class';
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-interface InputProps {
+interface InputProps extends HTMLProps<HTMLInputElement> {
   type?: string;
   className?: string;
   placeholder?: string;
@@ -13,7 +13,6 @@ interface InputProps {
 /**
  * 
  * @param props Input wrappers
- * @returns 
  */
 export default function Input(props: InputProps): React.ReactElement {
   const { 
@@ -22,10 +21,10 @@ export default function Input(props: InputProps): React.ReactElement {
     onChange,
     value,
     type = 'text',
-    disabled = false
+    ...rest
   } = props;
   
-  const classes = new DomClasses('px-2 py-1 border rounded');
+  const classes = new DomClasses('px-2 py-1 border rounded disabled:bg-gray-200');
 
   if(typeof className === 'string' && className != '') 
     classes.add(className);
@@ -38,7 +37,25 @@ export default function Input(props: InputProps): React.ReactElement {
       placeholder={placeholder}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange?.(e)}
       value={value}
-      disabled={disabled}
+      {...rest}
     />
   );
 }
+/**
+ * @description This is to be used when you need access to the underlying input element created
+ * so that you may call JS DOM methods. This will become the default in the next major release.
+ */
+export const ForwardInput = React.forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => {
+  const { className } = props;
+  const classes = new DomClasses('px-2 py-1 border rounded disabled:bg-gray-200');
+  if(typeof className === 'string' && className !== '') classes.add(className);
+
+  return (
+    <input
+      {...props}
+      className={classes.toString()}
+      ref={ref}
+    />
+  );
+  
+});

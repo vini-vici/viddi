@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 import styles from './checkbox.module.css';
 
-export interface CheckboxProps {
+export interface CheckboxProps extends HTMLProps<HTMLInputElement> {
   checked?: boolean;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
   disabled?: boolean;
 }
 
