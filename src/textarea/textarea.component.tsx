@@ -8,7 +8,7 @@ export interface TextareaProps extends HTMLProps<HTMLTextAreaElement> {
   disabled?: boolean;
 }
 
-export default function Textarea({ value, className, onChange, placeholder, disabled = false, ...rest }: TextareaProps): React.ReactElement {
+export default function Textarea({ value, className, onChange, placeholder, ...rest }: TextareaProps): React.ReactElement {
   const classes = new Dc('border border-gray-300 py-1 px-2 rounded');
   if(className !== undefined) classes.add(className);
   return (
@@ -18,7 +18,17 @@ export default function Textarea({ value, className, onChange, placeholder, disa
       onChange={e => onChange?.(e)}
       value={value}
       placeholder={placeholder}
-      disabled={disabled}
     />
   );
 }
+
+export const ForwardTextarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>((props, ref) => {
+  const classes = new Dc('border border-gray-300 py-1 px-2 rounded');
+  if(typeof props.className === 'string') classes.add(props.className);
+  return (
+    <textarea
+      {...props}
+      ref={ref}
+    />
+  );
+});

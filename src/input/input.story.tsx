@@ -2,7 +2,7 @@ import React, { ComponentProps } from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Input from './input.component';
+import Input, { ForwardInput } from './input.component';
 
 export default {
   title: 'Input',
@@ -33,4 +33,19 @@ Default.args = {
   placeholder: 'Placeholder',
   disabled: false,
   'aria-label': 'Hello'
+};
+
+const forwardStory: Story<ComponentProps<typeof Input>> = args => {
+  const ref = React.useRef<HTMLInputElement>(null);
+  React.useLayoutEffect(() => {
+    if (ref.current)
+      ref.current.focus();
+  }, [ref]);
+  return <ForwardInput {...args} ref={ref} />;
+};
+
+export const ForwardStory = forwardStory.bind({});
+ForwardStory.args = {
+  type: 'text',
+  placeholder: 'auto focus?'
 };

@@ -176,8 +176,7 @@ exports[`Storyshots FormField Custom 1`] = `
     className="form-field-control"
   >
     <input
-      className="px-2 py-1 border rounded"
-      disabled={false}
+      className="px-2 py-1 border rounded disabled:bg-gray-200"
       onChange={[Function]}
       placeholder="Placeholder"
       type="text"
@@ -204,8 +203,7 @@ exports[`Storyshots FormField Default 1`] = `
     className="form-field-control"
   >
     <input
-      className="px-2 py-1 border rounded"
-      disabled={false}
+      className="px-2 py-1 border rounded disabled:bg-gray-200"
       onChange={[Function]}
       type="text"
     />
@@ -216,10 +214,18 @@ exports[`Storyshots FormField Default 1`] = `
 exports[`Storyshots Input Default 1`] = `
 <input
   aria-label="Hello"
-  className="px-2 py-1 border rounded"
+  className="px-2 py-1 border rounded disabled:bg-gray-200"
   disabled={false}
   onChange={[Function]}
   placeholder="Placeholder"
+  type="text"
+/>
+`;
+
+exports[`Storyshots Input Forward Story 1`] = `
+<input
+  className="px-2 py-1 border rounded disabled:bg-gray-200"
+  placeholder="auto focus?"
   type="text"
 />
 `;
@@ -454,47 +460,6 @@ exports[`Storyshots Select Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select Testing Something 1`] = `
-<div>
-  Hey jim
-  <div
-    className="viddi-ui-select relative focus-within:border-gray-700 border rounded"
-  >
-    <header
-      className="flex justify-between select-none p-2 cursor-pointer"
-      onClick={[Function]}
-    >
-      <div
-        className="flex-1 overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-400"
-      >
-        Select an option...
-      </div>
-      <div>
-        <svg
-          role="presentation"
-          style={
-            Object {
-              "height": "1.5rem",
-              "width": "1.5rem",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-            style={
-              Object {
-                "fill": "currentColor",
-              }
-            }
-          />
-        </svg>
-      </div>
-    </header>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Tabs Examples Default 1`] = `
 <div
   className="tabs-container"
@@ -531,10 +496,28 @@ t"
 />
 `;
 
+exports[`Storyshots Textarea Forward Story 1`] = `
+<textarea
+  value="v
+e
+r
+y
+ 
+l
+o
+n
+g
+ 
+t
+e
+x
+t"
+/>
+`;
+
 exports[`Storyshots Textarea Full Width 1`] = `
 <textarea
   className="border border-gray-300 py-1 px-2 rounded w-full"
-  disabled={false}
   onChange={[Function]}
   value="v
 e
