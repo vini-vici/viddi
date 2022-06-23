@@ -37,29 +37,6 @@ exports[`Storyshots Checkbox Default 1`] = `
 </label>
 `;
 
-exports[`Storyshots Dropdown Default 1`] = `
-<div
-  aria-haspopup="listbox"
-  className="dropdown box-border relative border dark:hover:border-gray-200 border-transparent p-1 hover:border-gray-400 rounded"
->
-  <header
-    className="dropdown-trigger select-none"
-    onClick={[Function]}
-  >
-    I am the dropdown trigger.
-  </header>
-  <div
-    className="dropdown-items hidden absolute left-0 right-0 border rounded-md"
-  >
-    <div
-      className="dropdown-item"
-    >
-      hey jim
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Expandable Default 1`] = `
 <div
   className="expanded"
@@ -381,82 +358,6 @@ exports[`Storyshots Modal Default 1`] = `
       </button>
     </footer>
   </div>
-</div>
-`;
-
-exports[`Storyshots Select At Bottom 1`] = `
-<div
-  className="viddi-ui-select relative focus-within:border-gray-700 border rounded"
->
-  <header
-    className="flex justify-between select-none p-2 cursor-pointer"
-    onClick={[Function]}
-  >
-    <div
-      className="flex-1 overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-400"
-    >
-      hello there
-    </div>
-    <div>
-      <svg
-        role="presentation"
-        style={
-          Object {
-            "height": "1.5rem",
-            "width": "1.5rem",
-          }
-        }
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-          style={
-            Object {
-              "fill": "currentColor",
-            }
-          }
-        />
-      </svg>
-    </div>
-  </header>
-</div>
-`;
-
-exports[`Storyshots Select Default 1`] = `
-<div
-  className="viddi-ui-select relative focus-within:border-gray-700 border rounded"
->
-  <header
-    className="flex justify-between select-none p-2 cursor-pointer"
-    onClick={[Function]}
-  >
-    <div
-      className="flex-1 overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-400"
-    >
-      this is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very long
-    </div>
-    <div>
-      <svg
-        role="presentation"
-        style={
-          Object {
-            "height": "1.5rem",
-            "width": "1.5rem",
-          }
-        }
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-          style={
-            Object {
-              "fill": "currentColor",
-            }
-          }
-        />
-      </svg>
-    </div>
-  </header>
 </div>
 `;
 
