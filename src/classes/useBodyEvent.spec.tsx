@@ -4,7 +4,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 
 function TestClickComponent(): React.ReactElement {
   const [bodyClick, setBodyClick] = React.useState(0);
-  useBodyEvent('click', e => {
+  useBodyEvent('click', () => {
     setBodyClick(bodyClick + 1);
   }, [bodyClick]);
   return <div>
