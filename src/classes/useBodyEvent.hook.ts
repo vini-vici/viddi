@@ -7,6 +7,7 @@ import { useEffect, useCallback, useDebugValue } from 'react';
  * @param listener the listener function whose code the user would like to run
  * @param deps a list of dependencies that will trigger an update the internal handler.
  */
+// eslint-disable-next-line no-undef
 export default function useBodyHook<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => void, deps: unknown[]): void {
   // Debugger values.
   useDebugValue(`${type}(${deps.join(',')})`);

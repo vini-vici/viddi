@@ -12,8 +12,8 @@ test('Renders single correctly.', async () => {
   );
 
   const header = container.querySelector('header .tab-selector');
-  expect(header.classList.contains('active')).toBeTruthy();
-  expect(header.textContent).toBe('Hello');
+  expect(header?.classList.contains('active')).toBeTruthy();
+  expect(header?.textContent).toBe('Hello');
 });
 
 test('Renders initial state of multiple tabs correctly', async () => {

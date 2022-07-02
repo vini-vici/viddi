@@ -37,6 +37,255 @@ exports[`Storyshots Checkbox Default 1`] = `
 </label>
 `;
 
+exports[`Storyshots Dropdown Default 1`] = `
+<div
+  aria-haspopup="listbox"
+  className="inline-block dropdown box-border relative border dark:hover:border-gray-200 border-transparent p-1 hover:border-gray-400 rounded"
+>
+  <header
+    className="dropdown-trigger select-none flex"
+    onClick={[Function]}
+  >
+    <div
+      className="dropdown-trigger:header-label"
+    >
+      Placeholder
+    </div>
+    <div
+      className="dropdown-trigger:status-icon transition-transform ease-linear duration-200"
+      style={
+        Object {
+          "transform": "",
+        }
+      }
+    >
+      <svg
+        role="presentation"
+        style={
+          Object {
+            "height": "1.5rem",
+            "width": "1.5rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7,10L12,15L17,10H7Z"
+          style={
+            Object {
+              "fill": "currentColor",
+            }
+          }
+        />
+      </svg>
+    </div>
+  </header>
+  <div
+    className="box-border dropdown-items bg-white hidden absolute left-0 right-0 border rounded-md p-1"
+  >
+    <div
+      className="dropdown-item hover:bg-slate-300"
+      onClick={[Function]}
+    >
+      hey jim
+    </div>
+    <div
+      className="dropdown-item hover:bg-slate-300"
+      onClick={[Function]}
+    >
+      whats up
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown With Actions 1`] = `
+<div>
+  <div
+    aria-haspopup="listbox"
+    className="inline-block dropdown box-border relative border dark:hover:border-gray-200 border-transparent p-1 hover:border-gray-400 rounded"
+  >
+    <header
+      className="dropdown-trigger select-none flex"
+      onClick={[Function]}
+    >
+      <div
+        className="dropdown-trigger:header-label"
+      >
+        Please choose something
+      </div>
+      <div
+        className="dropdown-trigger:status-icon transition-transform ease-linear duration-200"
+        style={
+          Object {
+            "transform": "",
+          }
+        }
+      >
+        <svg
+          role="presentation"
+          style={
+            Object {
+              "height": "1.5rem",
+              "width": "1.5rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7,10L12,15L17,10H7Z"
+            style={
+              Object {
+                "fill": "currentColor",
+              }
+            }
+          />
+        </svg>
+      </div>
+    </header>
+    <div
+      className="box-border dropdown-items bg-white hidden absolute left-0 right-0 border rounded-md p-1"
+    >
+      <div
+        className="dropdown-item hover:bg-slate-300"
+        onClick={[Function]}
+      >
+        Something 1
+      </div>
+      <div
+        className="dropdown-item hover:bg-slate-300"
+        onClick={[Function]}
+      >
+        Something 2
+      </div>
+    </div>
+  </div>
+  <div
+    className="font-bold"
+  >
+    Currently Selected Item: 
+  </div>
+   
+  
+</div>
+`;
+
+exports[`Storyshots Dropdown With React 1`] = `
+<div>
+  <div
+    aria-haspopup="listbox"
+    className="inline-block dropdown box-border relative border dark:hover:border-gray-200 border-transparent p-1 hover:border-gray-400 rounded"
+  >
+    <header
+      className="dropdown-trigger select-none flex"
+      onClick={[Function]}
+    >
+      <div
+        className="dropdown-trigger:header-label"
+      >
+        <em>
+          Emphasized
+        </em>
+      </div>
+      <div
+        className="dropdown-trigger:status-icon transition-transform ease-linear duration-200"
+        style={
+          Object {
+            "transform": "",
+          }
+        }
+      >
+        <svg
+          role="presentation"
+          style={
+            Object {
+              "height": "1.5rem",
+              "width": "1.5rem",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7,10L12,15L17,10H7Z"
+            style={
+              Object {
+                "fill": "currentColor",
+              }
+            }
+          />
+        </svg>
+      </div>
+    </header>
+    <div
+      className="box-border dropdown-items bg-white hidden absolute left-0 right-0 border rounded-md p-1"
+    >
+      <div
+        className="dropdown-item hover:bg-slate-300"
+        onClick={[Function]}
+      >
+        <div
+          className="flex"
+        >
+          <svg
+            role="presentation"
+            style={
+              Object {
+                "height": "1.5rem",
+                "width": "1.5rem",
+              }
+            }
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14.4,6L14,4H5V21H7V14H12.6L13,16H20V6H14.4Z"
+              style={
+                Object {
+                  "fill": "currentColor",
+                }
+              }
+            />
+          </svg>
+          <div>
+            Flag
+          </div>
+        </div>
+      </div>
+      <div
+        className="dropdown-item hover:bg-slate-300"
+        onClick={[Function]}
+      >
+        <div
+          className="flex"
+        >
+          <svg
+            role="presentation"
+            style={
+              Object {
+                "height": "1.5rem",
+                "width": "1.5rem",
+              }
+            }
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14.4,6H20V16H13L12.6,14H7V21H5V4H14L14.4,6M14,14H16V12H18V10H16V8H14V10L13,8V6H11V8H9V6H7V8H9V10H7V12H9V10H11V12H13V10L14,12V14M11,10V8H13V10H11M14,10H16V12H14V10Z"
+              style={
+                Object {
+                  "fill": "currentColor",
+                }
+              }
+            />
+          </svg>
+          <div>
+            Flag 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Expandable Default 1`] = `
 <div
   className="expanded"
@@ -361,6 +610,82 @@ exports[`Storyshots Modal Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Select At Bottom 1`] = `
+<div
+  className="viddi-ui-select relative focus-within:border-gray-700 border rounded"
+>
+  <header
+    className="flex justify-between select-none p-2 cursor-pointer"
+    onClick={[Function]}
+  >
+    <div
+      className="flex-1 overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-400"
+    >
+      hello there
+    </div>
+    <div>
+      <svg
+        role="presentation"
+        style={
+          Object {
+            "height": "1.5rem",
+            "width": "1.5rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+          style={
+            Object {
+              "fill": "currentColor",
+            }
+          }
+        />
+      </svg>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Storyshots Select Default 1`] = `
+<div
+  className="viddi-ui-select relative focus-within:border-gray-700 border rounded"
+>
+  <header
+    className="flex justify-between select-none p-2 cursor-pointer"
+    onClick={[Function]}
+  >
+    <div
+      className="flex-1 overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-400"
+    >
+      this is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very longthis is very long
+    </div>
+    <div>
+      <svg
+        role="presentation"
+        style={
+          Object {
+            "height": "1.5rem",
+            "width": "1.5rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+          style={
+            Object {
+              "fill": "currentColor",
+            }
+          }
+        />
+      </svg>
+    </div>
+  </header>
+</div>
+`;
+
 exports[`Storyshots Tabs Examples Default 1`] = `
 <div
   className="tabs-container"
@@ -370,7 +695,10 @@ exports[`Storyshots Tabs Examples Default 1`] = `
   />
   <div
     className="tab-group"
-  />
+  >
+    
+    
+  </div>
 </div>
 `;
 

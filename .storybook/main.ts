@@ -2,8 +2,12 @@ import type { StorybookConfig } from '@storybook/react/types';
 
 module.exports = {
   stories: [
-    '../src/**/*.story.tsx'
+    '../src/**/*.story.tsx',
+    '../src/**/*.story.mdx'
   ],
+  features: {
+    storyStoreV7: true
+  },
   addons: [
     {
       name: '@storybook/addon-postcss',
@@ -19,13 +23,21 @@ module.exports = {
         },
       }
     },
-    '@storybook/addon-controls'
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
+    '@storybook/addon-test'
   ],
+  framework: '@storybook/react',
+  core: {
+    builder: '@storybook/builder-vite'
+  },
   webpackFinal: async (config) => {
     config.module.rules.unshift({
       test: /\.module\.css$/,
       use: [
-        require.resolve('style-loader'), 
+        require.resolve('style-loader'),
         {
           loader: require.resolve('css-loader'),
           options: {

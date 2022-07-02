@@ -130,3 +130,36 @@ test('Returns proper query selectors', async () => {
   const tokens = new DomClasses('one two');
   expect(tokens.toQuery()).toBe('.one.two');
 });
+
+test('Static methods work', async () => {
+  const a = DomClasses.toClassString({
+    a: true,
+    b: false,
+    c: true
+  });
+  expect(a).toBe('a c');
+});
+
+test('Construction with object works', async () => {
+  const first = new DomClasses({
+    a: true,
+    b: false,
+    c: true
+  }, 'waffles');
+  expect(first.toString()).toBe('a c waffles');
+});
+
+test('Construction with objects + addition of objects works', async () => {
+  const first = new DomClasses({
+    a: true,
+    b: false,
+    c: true
+  });
+
+  first.add({
+    d: true,
+    b: true
+  });
+
+  expect(first.toString()).toBe('a c d b');
+});

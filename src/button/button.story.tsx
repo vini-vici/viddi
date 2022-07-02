@@ -1,7 +1,6 @@
 import React, { ComponentProps } from 'react';
 
-import { Meta, Story} from '@storybook/react';
-
+import { Meta, Story } from '@storybook/react';
 import Button from './button.component';
 
 export default {
@@ -16,7 +15,7 @@ export default {
   }
 } as Meta;
 
-const S: Story<ComponentProps<typeof Button>> = args => <Button {...args}/>;
+const S: Story<ComponentProps<typeof Button>> = args => <Button {...args} />;
 
 export const Default = S.bind({});
 
@@ -31,7 +30,7 @@ Default.argTypes = {
     control: {
       type: 'select',
       options: [
-        'primary','secondary','custom'
+        'primary', 'secondary', 'custom'
       ]
     }
   }

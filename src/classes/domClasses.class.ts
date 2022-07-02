@@ -1,4 +1,6 @@
 
+export type ClassEntry = string | Record<string, boolean>;
+
 /**
  * @description a utility class to assist with chaining HTML class names back and forth.
  * 
@@ -8,12 +10,21 @@
 export default class DomClasses {
   #classes = new Set<string>();
 
+  static toClassString(obj: Record<string, boolean>): string {
+    return Object.keys(obj).reduce((cum, cur) => {
+      if (obj[cur]) cum += ' ' + cur;
+      return cum;
+    }, '').trim();
+  }
   /**
    * 
    * @param initialClasses the initial classes for our item to contain
    */
-  constructor(...initialClasses: string[]) {
-    const flattened = initialClasses.flatMap(item => item.split(' '));
+  constructor(...initialClasses: ClassEntry[]) {
+    const flattened = initialClasses.flatMap(item => {
+      if (typeof item === 'string') return item.split(' ');
+      return Object.keys(item).filter(key => item[key]);
+    });
     this.#classes = new Set(flattened);
   }
   /**
@@ -30,8 +41,11 @@ export default class DomClasses {
    * @param className classes to be added to this list.
    * @returns the current instance of the DomClasses object to allow for chaining.
    */
-  add(className: string): DomClasses {
-    className.split(' ').forEach(cn => this.#classes.add(cn));
+  add(className: ClassEntry): DomClasses {
+    if (typeof className === 'string')
+      className.split(' ').forEach(cn => this.#classes.add(cn));
+    else
+      Object.keys(className).forEach(cn => className[cn] ? this.#classes.add(cn) : void 0);
     return this;
   }
   /**
@@ -65,9 +79,9 @@ export default class DomClasses {
       }
     }
 
-    if (this.contains(className)) 
+    if (this.contains(className))
       this.remove(className);
-    else 
+    else
       this.add(className);
 
     return this;

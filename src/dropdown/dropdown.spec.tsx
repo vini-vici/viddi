@@ -1,7 +1,6 @@
 import React from 'react';
 import Dropdown, { DropdownItem } from './dropdown.component';
 import { render, screen } from '@testing-library/react';
-import jest from '@types/jest';
 
 function makeDropdownItems(length = 5): DropdownItem[] {
   return Array.from({ length }, (_, i) => ({

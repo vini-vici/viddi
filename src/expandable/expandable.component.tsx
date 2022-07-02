@@ -24,7 +24,7 @@ export default function Expandable(props: React.PropsWithChildren<ExpandableProp
           className="flex items-center cursor-pointer"
           onClick={() => {
             setExpanded(!expanded);
-            if(onToggle) {
+            if (onToggle) {
               const details = new CustomEvent<ToggleCustomDetail>('toggle', {
                 bubbles: false,
                 cancelable: false,
@@ -35,7 +35,7 @@ export default function Expandable(props: React.PropsWithChildren<ExpandableProp
               onToggle(details);
             }
           }}>
-          <Icon aria-roledescription="menu" className={expanded ? 'expanded' : 'collapsed'} path={expanded ? mdiMenuDown : mdiMenuRight} size={1} />
+          <Icon className={expanded ? 'expanded' : 'collapsed'} path={expanded ? mdiMenuDown : mdiMenuRight} size={1} />
           <div className="flex-grow">
             {header}
           </div>
