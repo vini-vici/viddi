@@ -6,7 +6,7 @@ interface TabProps {
 }
 
 export default function Tab(props: React.PropsWithChildren<TabProps>): React.ReactNode {
-  const {header, id = header, children} = props;
+  const { header, id = header, children } = props;
   const tabs = useTabs();
   React.useEffect(() => {
     tabs.addTab(id, header);
@@ -14,7 +14,7 @@ export default function Tab(props: React.PropsWithChildren<TabProps>): React.Rea
       tabs.removeTab(id);
     };
   }, []);
-  if(tabs.currentTab !== id) return null;
+  if (tabs.currentTab !== id) return '';
   return (
     <div className="tab">
       {children}

@@ -1,0 +1,23 @@
+.dropdownItem.highlighted {
+  @apply bg-blue-300;
+}
+
+.dropdownItem + .dropdownItem {
+  @apply border-t;
+}
+
+.dropdownItem {
+  @apply p-2;
+}
+
+.dropdownItem:hover { 
+  @apply bg-blue-300;
+}
+
+.dropdownItemsContainer {
+  overflow: auto;
+}
+
+.dropdownItemsContainer.bottom {
+  bottom: 100%;
+}
