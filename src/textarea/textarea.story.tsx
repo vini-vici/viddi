@@ -1,6 +1,6 @@
 import React, { ComponentType } from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import { Story } from '@ladle/react';
 import Textarea, { ForwardTextarea } from './textarea.component';
 
 const story: Story<ComponentType<typeof Textarea>> = args => <Textarea {...args} />;

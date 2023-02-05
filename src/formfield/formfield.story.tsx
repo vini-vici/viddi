@@ -1,6 +1,6 @@
 import React, { ComponentProps } from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import { Story } from '@ladle/react';
 
 import FormField from './formfield.component';
 import Input from '../input/input.component';

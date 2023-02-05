@@ -1,6 +1,6 @@
 import React, { ComponentType } from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import { Story } from '@ladle/react';
 
 import Modal from './modal.component';
 
