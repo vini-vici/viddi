@@ -5,11 +5,6 @@ import { Meta, Story } from '@storybook/react';
 import FormField from './formfield.component';
 import Input from '../input/input.component';
 
-export default {
-  title: 'FormField',
-  component: FormField
-} as Meta;
-
 const story: Story<ComponentProps<typeof FormField>> = args => <FormField {...args}/>;
 
 export const Default = story.bind({});
@@ -29,7 +24,7 @@ Custom.args = {
       <div>
         Text Content
       </div>
-      <div className="text-yellow-500">
+      <div className="text-yellow-700">
         Action items
       </div>
     </div>

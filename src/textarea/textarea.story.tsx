@@ -3,11 +3,6 @@ import React, { ComponentType } from 'react';
 import { Meta, Story } from '@storybook/react';
 import Textarea, { ForwardTextarea } from './textarea.component';
 
-export default {
-  title: 'Textarea',
-  component: Textarea
-} as Meta;
-
 const story: Story<ComponentType<typeof Textarea>> = args => <Textarea {...args} />;
 
 export const Default = story.bind({});

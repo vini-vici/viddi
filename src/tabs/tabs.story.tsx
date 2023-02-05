@@ -3,14 +3,6 @@ import { Meta, Story} from '@storybook/react';
 
 import { Tabs, Tab } from './index';
 
-export default {
-  title: 'Tabs Examples',
-  component: Tabs,
-  subcomponents: {
-    Tab
-  }
-} as Meta;
-
 const story: Story<ComponentType<typeof Tabs>> = args => (
   <Tabs {...args}>
     <Tab id="tab-1" header="Tab 1 Header">

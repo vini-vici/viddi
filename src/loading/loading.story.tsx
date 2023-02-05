@@ -5,11 +5,6 @@ import Loading from './loading.component';
 
 import { mdiCog, mdiLoading } from '@mdi/js';
 
-export default {
-  title: 'Loading',
-  component: Loading
-} as Meta;
-
 const story: Story<ComponentType<typeof Loading>> = args => <Loading {...args} />;
 
 export const Default = story.bind({});

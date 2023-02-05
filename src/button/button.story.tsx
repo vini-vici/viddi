@@ -4,18 +4,6 @@ import { Meta, Story} from '@storybook/react';
 
 import Button from './button.component';
 
-export default {
-  title: 'Button',
-  component: Button,
-  argTypes: {
-    variant: {
-      name: 'Variant',
-      description: 'How the button should be displayed.',
-      defaultValue: 'primary'
-    }
-  }
-} as Meta;
-
 const S: Story<ComponentProps<typeof Button>> = args => <Button {...args}/>;
 
 export const Default = S.bind({});
@@ -29,7 +17,7 @@ Default.args = {
 Default.argTypes = {
   variant: {
     control: {
-      type: 'select',
+      type: 'select', 
       options: [
         'primary','secondary','custom'
       ]
