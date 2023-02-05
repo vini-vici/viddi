@@ -1,15 +1,10 @@
 import React, { ComponentType } from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import { Story } from '@ladle/react';
 
 import Modal from './modal.component';
 
-export default {
-  title: 'Modal',
-  component: Modal
-} as Meta;
-
-const story: Story<ComponentType<typeof Modal>> = args => <Modal {...args}/>;
+const story: Story<ComponentType<typeof Modal>> = args => <Modal show {...args}/>;
 
 export const Default = story.bind({});
 Default.args = {

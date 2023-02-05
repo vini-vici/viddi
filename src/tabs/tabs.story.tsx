@@ -1,15 +1,7 @@
 import React, { ComponentType } from 'react';
-import { Meta, Story} from '@storybook/react';
+import { Story } from '@ladle/react';
 
 import { Tabs, Tab } from './index';
-
-export default {
-  title: 'Tabs Examples',
-  component: Tabs,
-  subcomponents: {
-    Tab
-  }
-} as Meta;
 
 const story: Story<ComponentType<typeof Tabs>> = args => (
   <Tabs {...args}>

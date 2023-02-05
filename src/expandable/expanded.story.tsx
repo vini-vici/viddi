@@ -1,13 +1,7 @@
 import React, { ComponentProps } from 'react';
 
-import { Meta, Story } from '@storybook/react';
-
+import { Story } from '@ladle/react';
 import Expandable from './expandable.component';
-
-export default {
-  title: 'Expandable',
-  component: Expandable
-} as Meta;
 
 const story: Story<ComponentProps<typeof Expandable>> = args => <Expandable {...args}/>;
 

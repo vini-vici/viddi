@@ -9,6 +9,9 @@
     "url": "https://github.com/vini-vici/viddi"
   },
   "scripts": {
+    "story:dev": "ladle serve",
+    "story:build": "ladle build",
+    "story:preview": "npm run story:build && ladle preview",
     "storybook-build": "build-storybook -o docs",
     "build:watch": "snowpack build --watch",
     "build": "snowpack build && cd src && tsc --declaration --emitDeclarationOnly",
@@ -27,12 +30,9 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
     "@core-fabrications/eslint-plugin": "^1.0.1",
+    "@ladle/react": "^2.5.2",
     "@snowpack/plugin-postcss": "^1.4.3",
     "@snowpack/plugin-typescript": "^1.2.1",
-    "@storybook/addon-controls": "^6.4.9",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addon-storyshots": "^6.4.9",
-    "@storybook/react": "^6.4.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^27.0.1",
@@ -53,8 +53,8 @@
   "dependencies": {
     "@mdi/js": "^5.9.55",
     "@mdi/react": "^1.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

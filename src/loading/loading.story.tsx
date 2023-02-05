@@ -1,14 +1,9 @@
 import React, { ComponentType } from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import { Story } from '@ladle/react';
 import Loading from './loading.component';
 
 import { mdiCog, mdiLoading } from '@mdi/js';
-
-export default {
-  title: 'Loading',
-  component: Loading
-} as Meta;
 
 const story: Story<ComponentType<typeof Loading>> = args => <Loading {...args} />;
 

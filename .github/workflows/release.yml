@@ -26,8 +26,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
           scope: '@vini-vici'
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm release
+      - run: npm ci
+      - run: npm run release
         name: Run Release Command
       - name: Push Tag back to repo
         uses: ad-m/github-push-action@master
@@ -38,6 +38,6 @@ jobs:
       # Github Actions does not run from refs that were pushed by other actions, as such,
       # the publish mechanism needs to go here as well.
       - name: Publish
-        run: pnpm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
