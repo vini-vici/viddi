@@ -5,9 +5,11 @@ export interface FormFieldProps {
   className?: string;
   label: string | React.ReactElement;
   description?: string | React.ReactElement;
+  hasError?: boolean;
+  errorText?: string | React.ReactElement;
 }
 
-export default function FormField({ label, description, children }: React.PropsWithChildren<FormFieldProps>): React.ReactElement {
+export default function FormField({ label, description, children, hasError, errorText }: React.PropsWithChildren<FormFieldProps>): React.ReactElement {
   const classes = new Dc('flex flex-col');
   return (
     <label className={classes.toString()}>
@@ -23,6 +25,9 @@ export default function FormField({ label, description, children }: React.PropsW
       }
       <div className="form-field-control">
         {children}
+      </div>
+      <div>
+        {hasError && errorText ? errorText : false }
       </div>
     </label>
   );

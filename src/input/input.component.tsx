@@ -8,6 +8,7 @@ interface InputProps extends HTMLProps<HTMLInputElement> {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
   disabled?: boolean;
+  invalid?: boolean;
 }
 
 /**
@@ -28,6 +29,10 @@ export default function Input(props: InputProps): React.ReactElement {
 
   if(typeof className === 'string' && className != '') 
     classes.add(className);
+
+  if(props.invalid) 
+    classes.add('border-red-400');
+  
   
 
   return (

@@ -1,0 +1,6 @@
+.button {
+  @apply bg-teal-500;
+}
+.button[disabled] {
+  @apply bg-teal-200 cursor-not-allowed;
+}
