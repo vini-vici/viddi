@@ -1,4 +1,7 @@
 
+
+export type ClassLike = string | Record<string, boolean>;
+
 /**
  * @description a utility class to assist with chaining HTML class names back and forth.
  * 
@@ -65,9 +68,9 @@ export default class DomClasses {
       }
     }
 
-    if (this.contains(className)) 
+    if (this.contains(className))
       this.remove(className);
-    else 
+    else
       this.add(className);
 
     return this;

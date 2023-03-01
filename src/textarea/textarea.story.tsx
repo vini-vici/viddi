@@ -1,7 +1,7 @@
-import React, { ComponentType } from 'react';
+import React, { ComponentType, useState } from 'react';
 
 import { Story } from '@ladle/react';
-import Textarea, { ForwardTextarea } from './textarea.component';
+import Textarea from './textarea.component';
 
 const story: Story<ComponentType<typeof Textarea>> = args => <Textarea {...args} />;
 
@@ -23,11 +23,26 @@ const forwardedStory: Story<ComponentType<typeof Textarea>> = args => {
   React.useLayoutEffect(() => {
     if (ref.current !== null) ref.current.focus();
   }, [ref]);
-  return <ForwardTextarea {...args} ref={ref} />;
+  return <Textarea {...args} ref={ref} />;
 };
 
-export const ForwardStory = forwardedStory.bind({});
+export const AutoFocus = forwardedStory.bind({});
 
-ForwardStory.args = {
+AutoFocus.args = {
   value: 'very long text'.split('').join('\n'),
+  readOnly: true,
 };
+
+export function Disabled(): React.ReactNode {
+  const [disabled, setDisabled] = useState(true);
+
+  return (
+    <div className="flex flex-col gap-2 items-start">
+      <div className="flex gap-2">
+        <label htmlFor="disabled">Disable</label>
+        <input type="checkbox" id="disabled" checked={disabled} onChange={() => setDisabled(!disabled)} />
+      </div>
+      <Textarea disabled={disabled} placeholder="I'm the placeholderiest" />
+    </div>
+  );
+}

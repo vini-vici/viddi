@@ -12,31 +12,26 @@ interface InputProps extends HTMLProps<HTMLInputElement> {
 }
 
 /**
- * 
- * @param props Input wrappers
+ * @description This is to be used when you need access to the underlying input element created
+ * so that you may call JS DOM methods. This will become the default in the next major release.
  */
-export default function Input(props: InputProps): React.ReactElement {
-  const { 
-    className,
-    placeholder,
-    onChange,
-    value,
-    type = 'text',
-    ...rest
-  } = props;
-  
-  const classes = new DomClasses('px-2 py-1 border rounded text-gray-600 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:text-gray-500 disabled:placeholder:text-gray-500 ');
+export const ForwardInput = React.forwardRef<HTMLInputElement, InputProps>(({
+  className,
+  placeholder, onChange,
+  value, type = 'text',
+  ...rest
+}: InputProps, ref) => {
+  const classes = new DomClasses('px-2 py-1 bg-gray-50 border rounded disabled:cursor-not-allowed disabled:bg-gray-100 disabled:placeholder:text-gray-400 disabled:text-gray-500');
 
-  if(typeof className === 'string' && className != '') 
+  if (typeof className === 'string' && className != '')
     classes.add(className);
 
-  if(props.invalid) 
+  if (rest.invalid)
     classes.add('border-red-400');
-  
-  
 
   return (
     <input
+      ref={ref}
       type={type}
       className={classes.toString()}
       placeholder={placeholder}
@@ -45,22 +40,7 @@ export default function Input(props: InputProps): React.ReactElement {
       {...rest}
     />
   );
-}
-/**
- * @description This is to be used when you need access to the underlying input element created
- * so that you may call JS DOM methods. This will become the default in the next major release.
- */
-export const ForwardInput = React.forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => {
-  const { className } = props;
-  const classes = new DomClasses('px-2 py-1 border rounded disabled:bg-gray-200');
-  if(typeof className === 'string' && className !== '') classes.add(className);
 
-  return (
-    <input
-      {...props}
-      className={classes.toString()}
-      ref={ref}
-    />
-  );
-  
 });
+
+export default ForwardInput;

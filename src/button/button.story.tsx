@@ -1,11 +1,11 @@
 import React, { ComponentProps, useState } from 'react';
 
-import { Story } from '@storybook/react';
+import { Story } from '@ladle/react';
 
 import Button from './button.component';
 import css from './buttonStory.custom.module.css';
 
-const S: Story<ComponentProps<typeof Button>> = args => <Button {...args}/>;
+const S: Story<ComponentProps<typeof Button>> = args => <Button {...args} />;
 
 export const Default = S.bind({});
 
@@ -18,10 +18,9 @@ Default.args = {
 Default.argTypes = {
   variant: {
     control: {
-      type: 'select', 
+      type: 'select',
       options: [
-        'primary','secondary','custom'
-      ]
+        'primary', 'secondary', 'custom']
     }
   }
 };
@@ -39,7 +38,7 @@ export function Disabled(): React.ReactNode {
     <div className="flex flex-col gap-2 justify-start items-start">
       <div className="flex gap-2">
         <label htmlFor="disabled">Disabled?</label>
-        <input id="disabled" type="checkbox" onChange={() => setDisabled(!disabled)} checked={disabled}/>
+        <input id="disabled" type="checkbox" onChange={() => setDisabled(!disabled)} checked={disabled} />
       </div>
       <Button disabled={disabled}>
         Primary Disabled State
@@ -57,5 +56,5 @@ export function Disabled(): React.ReactNode {
         With CSS Module stylings.
       </Button>
     </div>
-  )
+  );
 }
