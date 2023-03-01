@@ -23,8 +23,27 @@ const forwardStory: Story<ComponentProps<typeof Input>> = args => {
   return <ForwardInput {...args} ref={ref} />;
 };
 
-export const ForwardStory = forwardStory.bind({});
-ForwardStory.args = {
+export const AutoFocus = forwardStory.bind({});
+AutoFocus.args = {
   type: 'text',
   placeholder: 'auto focus?'
 };
+
+export function Disabled() {
+  const [disabled, setDisabled] = React.useState(true);
+
+  return (
+    <React.Fragment>
+
+      <div>
+        Disable?
+        <input type="checkbox" checked={disabled} onChange={() => setDisabled(!disabled)} />
+      </div>
+      <Input
+        disabled={disabled}
+        placeholder="disabled"
+        value="Disabled value"
+      />
+    </React.Fragment>
+  )
+}

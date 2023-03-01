@@ -25,7 +25,7 @@ export default function Input(props: InputProps): React.ReactElement {
     ...rest
   } = props;
   
-  const classes = new DomClasses('px-2 py-1 border rounded disabled:bg-gray-200');
+  const classes = new DomClasses('px-2 py-1 border rounded text-gray-600 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:text-gray-500 disabled:placeholder:text-gray-500 ');
 
   if(typeof className === 'string' && className != '') 
     classes.add(className);
