@@ -27,7 +27,7 @@ export const ForwardInput = React.forwardRef<HTMLInputElement, InputProps>(({
     classes.add(className);
 
   if (rest.invalid)
-    classes.add('border-red-400');
+    classes.add('border-red-600 text-red-600');
 
   return (
     <input

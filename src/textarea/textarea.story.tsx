@@ -46,3 +46,9 @@ export function Disabled(): React.ReactNode {
     </div>
   );
 }
+
+export function Invalid(): React.ReactNode {
+  return (
+    <Textarea value="Testing" invalid />
+  );
+}
