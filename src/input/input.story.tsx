@@ -2,7 +2,7 @@ import React, { ComponentProps } from 'react';
 
 import { Story } from '@ladle/react';
 
-import Input, { ForwardInput } from './input.component';
+import Input from './input.component';
 
 const story: Story<ComponentProps<typeof Input>> = args => <Input {...args} />;
 
@@ -14,17 +14,38 @@ Default.args = {
   'aria-label': 'Hello'
 };
 
-const forwardStory: Story<ComponentProps<typeof Input>> = args => {
-  const ref = React.useRef<HTMLInputElement>(null);
-  React.useLayoutEffect(() => {
-    if (ref.current)
-      ref.current.focus();
-  }, [ref]);
-  return <ForwardInput {...args} ref={ref} />;
-};
+export function ForwardStory(): React.ReactNode {
+  const ref = React.useRef<HTMLInputElement | null>(null);
+  React.useEffect(() => {
+    ref.current?.focus();
+  }, []);
+  return (
+    <Input ref={ref} placeholder="This should auto focus" />
+  );
+}
 
-export const ForwardStory = forwardStory.bind({});
-ForwardStory.args = {
-  type: 'text',
-  placeholder: 'auto focus?'
-};
+export function Disabled(): React.ReactNode {
+  const [disabled, setDisabled] = React.useState(true);
+
+  return (
+    <React.Fragment>
+      <div>
+        Disable?
+        <input type="checkbox" checked={disabled} onChange={() => setDisabled(!disabled)} />
+      </div>
+      <Input
+        disabled={disabled}
+        placeholder="disabled"
+        value="disabled with value"
+      />
+      <br />
+      <Input disabled={disabled} placeholder="Disabled without value" />
+    </React.Fragment>
+  );
+}
+
+export function Invalid(): React.ReactNode {
+  return (
+    <Input invalid value="Invalid" />
+  );
+}
