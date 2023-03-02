@@ -1,6 +1,6 @@
 {
   "name": "@vini-vici/viddi",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "It's UI.",
   "exports": {
     "default": "./dist/index.js",

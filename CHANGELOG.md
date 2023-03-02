@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/vini-vici/viddi/compare/v1.1.3...v1.2.0) (2023-03-02)
+
+
+### Features
+
+* Move off of storybook ([#15](https://github.com/vini-vici/viddi/issues/15)) ([4ef5863](https://github.com/vini-vici/viddi/commit/4ef5863cf3ae79d44844cdf91e1f1f5b43eca8af))
+* Updates multiple components to add in disabled and invalid props on textareas and inputs([#16](https://github.com/vini-vici/viddi/issues/16)) ([b6f7227](https://github.com/vini-vici/viddi/commit/b6f7227944ca8280be6f719a6b0b84163ab563e3))
+
 ### 1.1.3 (2021-12-10)
 
 ### [1.1.1](https://github.com/vini-vici/viddi/compare/v1.1.0...v1.1.1) (2021-12-03)
