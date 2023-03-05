@@ -2,10 +2,13 @@
   "name": "@vini-vici/viddi",
   "version": "1.2.0",
   "description": "It's UI.",
+  "type": "module",
   "exports": {
-    "default": "./dist/index.js",
-    "types": "./dist/index.ts.ts"
+    ".": {
+      "import": "./dist/index.js"
+    }
   },
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vini-vici/viddi"
@@ -14,9 +17,8 @@
     "story:dev": "ladle serve",
     "story:build": "ladle build",
     "story:preview": "npm run story:build && ladle preview",
-    "storybook-build": "build-storybook -o docs",
-    "build:watch": "snowpack build --watch",
-    "build": "snowpack build && cd src && tsc --declaration --emitDeclarationOnly",
+    "build:watch": "vite build --watch",
+    "build": "vite build",
     "release": "standard-version",
     "start": "start-storybook -p 9000 --no-manager-cache",
     "test": "jest",
@@ -33,8 +35,6 @@
     "@babel/preset-typescript": "^7.15.0",
     "@core-fabrications/eslint-plugin": "^1.0.1",
     "@ladle/react": "^2.5.2",
-    "@snowpack/plugin-postcss": "^1.4.3",
-    "@snowpack/plugin-typescript": "^1.2.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^27.0.1",
@@ -47,11 +47,12 @@
     "jest": "^27.0.6",
     "jest-environment-jsdom": "^27.4.4",
     "postcss": "^8.4.14",
-    "snowpack": "^3.8.6",
     "standard-version": "^9.3.1",
     "tailwindcss": "^3.1.4",
     "typescript": "^4.3.5",
-    "vite": "^4.1.4"
+    "vite": "^4.1.4",
+    "vite-plugin-build": "^0.7.1",
+    "vite-plugin-dts": "^2.0.2"
   },
   "dependencies": {
     "@mdi/js": "^5.9.55",
