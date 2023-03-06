@@ -4,6 +4,10 @@ The Vidi UI is the playful name given to the UI for the Vicci project.
 
 This UI was built to be an example UI for others, and was originally part of the front-end for the Vicci project. It was been split out in order to have the front-end focus on the actual parts of the application. It should be considered like any other third-party UI library, such as Material UI.
 
+## Notes
+
+Due to the move to React 18, there is currently some weirdness with the `Tabs`/`Tab` component.
+
 ## Local Work
 
 To create a new component simply add in a new folder, complete with files. The going standard is
