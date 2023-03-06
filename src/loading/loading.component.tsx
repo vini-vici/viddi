@@ -9,7 +9,7 @@ export interface LoadingProps {
   icon?: string;
 }
 
-export default function Loading({ text = 'Loading', size = 1, icon = mdiLoading}: LoadingProps): React.ReactElement {
+export default function Loading({ text = 'Loading', size = 1, icon = mdiLoading }: LoadingProps): React.ReactElement {
   return (
     <div className="loading flex items-center">
       <Icon
@@ -18,7 +18,7 @@ export default function Loading({ text = 'Loading', size = 1, icon = mdiLoading}
         spin={1.5}
       />
       {
-        text ? 
+        text ?
           `${text}...` :
           null
       }

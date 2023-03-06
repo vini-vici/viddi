@@ -2,13 +2,23 @@
   "name": "@vini-vici/viddi",
   "version": "1.2.1",
   "description": "It's UI.",
-  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": {
+      "default": "./dist/style.css"
     }
   },
-  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "dist/style.css"
+  ],
+  "main": "./dist/index.es.js",
+  "module": "dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/vini-vici/viddi"
@@ -20,7 +30,6 @@
     "build:watch": "vite build --watch",
     "build": "vite build",
     "release": "standard-version",
-    "start": "start-storybook -p 9000 --no-manager-cache",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .ts,.tsx src"
@@ -29,10 +38,6 @@
   "author": "jhechtf+git@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
     "@core-fabrications/eslint-plugin": "^1.0.1",
     "@ladle/react": "^2.5.2",
     "@testing-library/jest-dom": "^5.14.1",
