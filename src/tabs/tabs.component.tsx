@@ -1,4 +1,4 @@
-import React, {PropsWithChildren} from 'react';
+import React, { PropsWithChildren } from 'react';
 import Dc from '../classes/domClasses.class';
 
 interface TabChangeDetail {
@@ -10,6 +10,7 @@ interface TabsProps {
   className?: string;
   activeTab?: string;
   onTabChange?: (e: CustomEvent<TabChangeDetail>) => void;
+  children: React.ReactNode | React.ReactNode[];
 }
 
 export interface TabsContext {
@@ -18,7 +19,7 @@ export interface TabsContext {
   currentTab: string;
 }
 
-const Context = React.createContext<TabsContext | undefined >(undefined);
+const Context = React.createContext<TabsContext | undefined>(undefined);
 
 interface TabMap {
   [key: string]: string;
@@ -29,10 +30,10 @@ interface TabMap {
  * @returns React Element
  * @description React tab group element.
  */
-export default function Tabs(props: PropsWithChildren<TabsProps>): React.ReactElement {
+export default function Tabs(props: TabsProps): React.ReactElement {
   const { className, children, onTabChange, activeTab } = props;
   const classes = new Dc('tab-group');
-  if(className) classes.add(className);
+  if (className) classes.add(className);
 
   const [tabMap, updateTabMap] = React.useState<TabMap>({});
   const [currentTab, setCurrentTab] = React.useState('');
@@ -40,12 +41,12 @@ export default function Tabs(props: PropsWithChildren<TabsProps>): React.ReactEl
   React.useEffect(() => {
 
     const keys = Object.keys(tabMap);
-    if(activeTab !== undefined) 
+    if (activeTab !== undefined)
       setCurrentTab(activeTab);
-    
-    if(keys.length !== 0 && currentTab === '') 
+
+    if (keys.length !== 0 && currentTab === '')
       setCurrentTab(keys[0]);
-    
+
   }, [tabMap]);
 
   const context: TabsContext = {
@@ -66,7 +67,7 @@ export default function Tabs(props: PropsWithChildren<TabsProps>): React.ReactEl
     },
     currentTab
   };
-  
+
   return (
     <div className="tabs-container">
       <Context.Provider value={context}>
@@ -75,7 +76,7 @@ export default function Tabs(props: PropsWithChildren<TabsProps>): React.ReactEl
             Object.entries(tabMap)
               .map(([id, header]) => {
                 const classes = new Dc('p-3 text-gray-400 tab-selector');
-                if(currentTab === id) classes.remove('text-gray-400').add('border-b-2 border-blue-400 active');
+                if (currentTab === id) classes.remove('text-gray-400').add('border-b-2 border-blue-400 active');
                 return (
                   <div
                     key={`tabs-selector-${id}`}
@@ -109,6 +110,6 @@ export default function Tabs(props: PropsWithChildren<TabsProps>): React.ReactEl
 
 export function useTabs(): TabsContext {
   const tabs = React.useContext(Context);
-  if(!tabs) throw Error('useTabs must be used inside a tabs context');
+  if (!tabs) throw Error('useTabs must be used inside a tabs context');
   return tabs;
 }
