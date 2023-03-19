@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/vini-vici/viddi/compare/v1.2.2...v1.2.3) (2023-03-19)
+
+
+### Bug Fixes
+
+* Removes unnecessary text ([#20](https://github.com/vini-vici/viddi/issues/20)) ([ea25a91](https://github.com/vini-vici/viddi/commit/ea25a919b1485213c49a5d0c7d5f1a3b14afd5f3))
+
 ### [1.2.2](https://github.com/vini-vici/viddi/compare/v1.2.1...v1.2.2) (2023-03-06)
 
 
