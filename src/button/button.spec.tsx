@@ -1,14 +1,30 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
 import Button from './button.component';
 
-test('Renders with default styles', async () => {
-  render(
-    <Button>
-      Testing
-    </Button>
-  );
-  expect(screen.getByText('Testing').className).toContain('bg-purple-400');
+describe('Button', () => {
+  it('renders with default styles', () => {
+    render(
+      <Button>
+        Testing
+      </Button>
+    );
+    expect(screen.getByText('Testing').className).toContain('bg-purple-400');
+  });
+
+  it('handles onClick events', () => {
+    const onClick = vi.fn();
+    render(
+      <Button
+        onClick={onClick}
+      >
+        Testing
+      </Button>
+    );
+    fireEvent.click(screen.getByText('Testing'));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
 });
 
 test('Renders proper variants', async () => {
@@ -26,17 +42,4 @@ test('Renders proper variants', async () => {
   );
 
   expect(screen.getByText('Testing').className).toContain('custom-text');
-});
-
-test('onClick works', async () => {
-  const onClick = jest.fn();
-  render(
-    <Button
-      onClick={onClick}
-    >
-      Testing
-    </Button>
-  );
-  fireEvent.click(screen.getByText('Testing'));
-  expect(onClick).toHaveBeenCalledTimes(1);
 });

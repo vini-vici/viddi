@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
 
 import Input from './input.component';
 
@@ -18,27 +19,29 @@ test('Testing value', async () => {
   screen.findByDisplayValue('testing value');
 });
 
-test('Changes update correctly.', async () => {
-  const onChange = jest.fn();
-  const {container } = render(
-    <Input value="testing" onChange={onChange} />
-  );
-  fireEvent.change(
-    container.querySelector('input'),
-    {
-      target: {
-        value: 'Jim'
+describe('Input', () => {
+  it('changes update correctly', () => {
+    const onChange = vi.fn();
+    const { container } = render(
+      <Input value="testing" onChange={onChange} />
+    );
+    fireEvent.change(
+      container.querySelector('input'),
+      {
+        target: {
+          value: 'Jim'
+        }
       }
-    }
-  );
-  expect(onChange).toHaveBeenCalled();
-});
+    );
+    expect(onChange).toHaveBeenCalled();
+  });
 
-test('Adds custom class name', async () => {
-  const { container } = render(
-    <Input className="custom-class"/>
-  );
-  expect(container.querySelector('input').classList.contains('custom-class'));
+  it('adds custom class name', () => {
+    const { container } = render(
+      <Input className="custom-class"/>
+    );
+    expect(container.querySelector('input')?.classList.contains('custom-class')).toBe(true);
+  });
 });
 
 test('Changes type of rendered input', async () => {

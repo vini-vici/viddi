@@ -1,12 +1,9 @@
-module.exports = {
-  mode: 'jit',
+/** @type {import('@tailwindcss/postcss').Config} */
+export default {
   content: [
-    './src/**/*.tsx'
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [],

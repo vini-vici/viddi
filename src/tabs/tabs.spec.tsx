@@ -1,19 +1,33 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
 import { Tabs, Tab, useTabs } from './index';
 
-test('Renders single correctly.', async () => {
-  const { container } = render(
-    <Tabs>
-      <Tab header="Hello" id="hello">
-        Testing
-      </Tab>
-    </Tabs>
-  );
+describe('Tabs', () => {
+  it('renders single tab correctly', () => {
+    const { container } = render(
+      <Tabs>
+        <Tab header="Hello" id="hello">
+          Testing
+        </Tab>
+      </Tabs>
+    );
 
-  const header = container.querySelector('header .tab-selector');
-  expect(header.classList.contains('active')).toBeTruthy();
-  expect(header.textContent).toBe('Hello');
+    const header = container.querySelector('header .tab-selector');
+    expect(header?.classList.contains('active')).toBe(true);
+    expect(header?.textContent).toBe('Hello');
+  });
+
+  it('renders custom classes correctly', () => {
+    const { container } = render(
+      <Tabs className="custom-class">
+        <Tab header="Tab 1">
+          Tab 1 Content
+        </Tab>
+      </Tabs>
+    );
+    expect(container.querySelector('.custom-class')).not.toBeNull();
+  });
 });
 
 test('Renders initial state of multiple tabs correctly', async () => {
@@ -89,17 +103,6 @@ test('Custom onChangeTab function is called', async () => {
   );
   fireEvent.click(screen.getByText('Header 2'));
   expect(onTabChange).toHaveBeenCalledTimes(1);
-});
-
-test('Renders Custom Classes correctly', async () => {
-  const { container } = render(
-    <Tabs className="custom-class">
-      <Tab header="Tab 1">
-        Tab 1 Content
-      </Tab>
-    </Tabs>
-  );
-  expect(container.querySelector('.custom-class')).not.toBeNull();
 });
 
 test('Failure', async () => {

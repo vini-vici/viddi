@@ -1,11 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-
+import { describe, it, expect } from 'vitest';
 import Loading from './loading.component';
 
-test('Default Loading text', async () => {
-  render(<Loading/>);
-  expect(screen.findByText('Loading'));
+describe('Loading', () => {
+  it('shows default loading text', async () => {
+    render(<Loading/>);
+    expect(await screen.findByText('Loading')).toBeInTheDocument();
+  });
 });
 
 test('Customize loading text', async () => {
